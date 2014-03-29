@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>jQbrick</title>
+
+    <!-- Mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- // Mobile -->
+	
+	
+	<!--[CSS]-->
+	<link rel="stylesheet" href="./assets/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+	<!--[/CSS]-->
+	
+</head>
+
+<body>
+    
+    <div id="page1" data-role="page">
+        <div data-role="header">
+            <h1>Test Page</h1>
+        </div>
+        <div data-role="content">
+            <p>foo content</p>
+            <a href="#page2" data-role="button">Page2</a>
+        </div>
+    </div>
+    
+    <div id="page2" data-role="page">
+        <div data-role="header">
+            <h1>Test Page</h1>
+        </div>
+        <div data-role="content">
+            <p>foo content</p>
+            <a href="#page1" data-role="button" data-direction="reverse">Page1</a>
+        </div>
+    </div>
+    
+    <!--[LIB]-->
+    <script src="./assets/lib/jquery-2.1.0.js"></script>
+    <script src="./assets/lib/knockout-3.1.0.debug.js"></script>
+    <script src="./assets/lib/jquery.mobile.throttle.js"></script>
+    <script src="./assets/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.js"></script>
+    <!--[/LIB]-->
+    
+    <!--[JS]-->
+    <!--[/JS]-->
+    
+    <script>
+    startApp();
+    </script>
+    
+</body>
+</html>
