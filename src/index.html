@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
-	<title>jQbrick</title>
+	<title>SwedishCards</title>
 
     <!-- Mobile -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -16,25 +16,31 @@
 
 <body>
     
-    <div id="page1" data-role="page">
+    <div id="cards-page" data-role="page">
         <div data-role="header">
-            <h1>Test Page</h1>
+            <h1>SwedishCards</h1>
+            <a href="#next-card" data-icon="carat-r" data-iconpos="right" class="ui-btn-right">skip</a>
         </div>
-        <div data-role="content">
-            <p>foo content</p>
-            <a href="#page2" data-role="button">Page2</a>
+        <div data-role="content" id="cards">
+            <div data-bind="if: loading() === true">
+                <p>loading...</p>
+            </div>
+            <div data-bind="if: loading() === false">
+                <p data-bind="text:question" style="margin-bottom: 40px">Question</p>
+                <ul data-role="listview" data-bind="
+                    foreach: {
+                        data: answers,
+                        afterRender: onAnswersRender
+                    }
+                ">
+                    <li>
+                        <p><a data-bind="text:t, click:$root.onAnswer.bind($root)">answer 1</a></p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     
-    <div id="page2" data-role="page">
-        <div data-role="header">
-            <h1>Test Page</h1>
-        </div>
-        <div data-role="content">
-            <p>foo content</p>
-            <a href="#page1" data-role="button" data-direction="reverse">Page1</a>
-        </div>
-    </div>
     
     <!--[LIB]-->
     <script src="./assets/lib/jquery-2.1.0.js"></script>

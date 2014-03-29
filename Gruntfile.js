@@ -107,7 +107,7 @@ module.exports = function (grunt) {
         'copy:wkd-sourcemap-js',
         'copy:wkd-sourcemap-less',
         'copy:wkd-less-css',
-//        'clean:wks-tmp'
+        'clean:wks-tmp'
     ]);
     
     grunt.registerTask('release', [
