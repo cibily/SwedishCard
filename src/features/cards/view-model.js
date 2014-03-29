@@ -33,22 +33,27 @@ var ViewModel = {
     },
     
     onAnswersRender: function() {
-        var self = this;
-        clearTimeout(this.afterRenderTimeout);
-        this.afterRenderTimeout = setTimeout(function() {
-            $("#cards ul").listview().listview("refresh");
-        }, 0);
+        $("#cards ul").listview().listview("refresh");
     },
     
     onAnswer: function(item, e, vm) {
         var self = this;
+        var target = e.currentTarget;
+        console.log(target);
         if (item.c) {
-            $(e.target).parents('li').css('background', 'green');
+            $(target).css({
+                background: '#88c089',
+                'text-shadow' : 'none'
+            });
             setTimeout(function() {
                 self.random();
             }, 500);
         } else {
-            $(e.target).parents('li').css('background', 'red');
+            $(target).css({
+                background: '#d03136',
+                color: '#fff',
+                'text-shadow' : 'none'
+            });
         }
     }
 

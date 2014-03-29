@@ -5,7 +5,7 @@
 var db = [{
     q: "question 01" ,
     a: [{
-        t: "answer 01-01",
+        t: "answer 01-01 very long long long answer 01-01 very long long long answer 01-01 very long long long answer 01-01 very long long long",
         c: false
     },{
         t: "answer 01-02",

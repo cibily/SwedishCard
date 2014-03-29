@@ -10,7 +10,7 @@
 	
 	
 	<!--[CSS]-->
-	<link rel="stylesheet" href="./assets/lib/jquery.mobile-1.4.2/jquery.mobile-1.4.2.css" />
+	<link rel="stylesheet" href="./assets/lib/jquery.mobile-1.4.2/jquery.mobile.inline-svg-1.4.2.min.css" />
 	<!--[/CSS]-->
 	
 </head>
@@ -20,22 +20,26 @@
     <div id="cards-page" data-role="page">
         <div data-role="header">
             <h1>SwedishCards</h1>
-            <a href="#next-card" data-icon="carat-r" data-iconpos="right" class="ui-btn-right">skip</a>
+            <a href="#next-card" data-icon="refresh" data-iconpos="notext" class="ui-btn-right">skip</a>
         </div>
         <div data-role="content" id="cards">
             <div data-bind="if: loading() === true">
                 <p>loading...</p>
             </div>
             <div data-bind="if: loading() === false">
-                <p data-bind="text:question" style="margin-bottom: 40px">Question</p>
+                <p data-bind="text:question" class="card-question">Question</p>
                 <ul data-role="listview" data-bind="
                     foreach: {
                         data: answers,
                         afterRender: onAnswersRender
                     }
                 ">
-                    <li>
-                        <p><a data-bind="text:t, click:$root.onAnswer.bind($root)">answer 1</a></p>
+                    <li class="card-answer" data-bind="
+                        event: {
+                            touchend: $root.onAnswer.bind($root)
+                        }
+                    ">
+                        <p data-bind="text:t">answer</p>
                     </li>
                 </ul>
             </div>

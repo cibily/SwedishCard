@@ -33,34 +33,22 @@ module.exports = function (grunt) {
          * Workspace Configuration
          */
         'workspace': {
-//            options: {
-//                minifyTemplates: false,
-//                release: {
+            options: {
+                release: {
 //                    uglify: {
 //                        beautify: true,
 //                        compress: false,
 //                        mangle: false
-//                    },
-//                    minifyHtml: false,
-//                    manifest: {
-//                        exclude: [
-//                            '/assets/readme.txt',    // exclude file path
-//                            '/assets/css/images/**'  // exclude an entire folder
-//                        ]
 //                    }
-//                },
-//                karma: {
-//                    test: {
-//                        browsers: [
-//                            'PhantomJS',
-//                            'Chrome', 
-//                            'ChromeCanary', 
-//                            'Firefox', 
-//                            'Opera'
-//                        ]
-//                    }
-//                }
-//            }
+                    manifest: {
+                        exclude: [
+                            '/assets/readme.txt',
+                            '/assets/css/images/icons-png/**',
+                            '/assets/css/images/icons-svg/**'
+                        ]
+                    }
+                }
+            }
         },
         
         copy : {
