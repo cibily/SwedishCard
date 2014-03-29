@@ -41,7 +41,13 @@ module.exports = function (grunt) {
 //                        compress: false,
 //                        mangle: false
 //                    },
-//                    minifyHtml: false
+//                    minifyHtml: false,
+//                    manifest: {
+//                        exclude: [
+//                            '/assets/readme.txt',    // exclude file path
+//                            '/assets/css/images/**'  // exclude an entire folder
+//                        ]
+//                    }
 //                },
 //                karma: {
 //                    test: {
@@ -133,7 +139,8 @@ module.exports = function (grunt) {
         'wkr-clear-assets',
         'clean:wkr-after',
         'clean:wks-tmp',
-        'cleanempty:wkr'
+        'cleanempty:wkr',
+        'wkr-cache-manifest'
     ]);
         
     grunt.registerTask('develop', [
