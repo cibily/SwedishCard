@@ -60,6 +60,7 @@
     "grunt-karma": "~0.8.2"
   },
   "dependencies": {
-    "jqbrick": "~0.0.2"
+    "jqbrick": "~0.0.2",
+    "jqb-random": "~0.1.0"
   }
 }

@@ -35,17 +35,17 @@ module.exports = function (grunt) {
         'workspace': {
             options: {
                 release: {
-//                    uglify: {
-//                        beautify: true,
-//                        compress: false,
-//                        mangle: false
-//                    },
+                    uglify: {
+                        beautify: true,
+                        compress: false,
+                        mangle: false
+                    },
 //                    minifyHtml: false,
-                    manifest: {
-                        exclude: [
-                            '/assets/**',
-                        ]
-                    }
+//                    manifest: {
+//                        exclude: [
+//                            '/assets/**',
+//                        ]
+//                    }
                 }
             }
         },

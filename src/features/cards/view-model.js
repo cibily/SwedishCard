@@ -1,4 +1,4 @@
-var random = require('jqbrick/utils/random');
+var random = require('jqb-random');
 
 var loadCards = require('./db');
 
@@ -24,7 +24,7 @@ var ViewModel = {
     random: function() {
         // get new card
         var card;
-        while ((card = random.arrayItem(this.cards)) == this.card ) {}
+        while ((card = random.item(this.cards)) == this.card ) {}
         this.card = card;
         
         // populate local data
