@@ -3,34 +3,34 @@
  * Fake DB
  */
 var db = [{
-    q: "question 01" ,
+    q: "vad heter du?" ,
     a: [{
-        t: "answer 01-01 very long long long answer 01-01 very long long long answer 01-01 very long long long answer 01-01 very long long long",
-        c: false
-    },{
-        t: "answer 01-02",
-        c: true
-    }]
-},{
-    q: "question 02" ,
-    a: [{
-        t: "answer 02-01",
+        t: "Jag heter Joe",
         c: true
     },{
-        t: "answer 02-02",
+        t: "Jag är 22 år gammal",
         c: false
     }]
 },{
-    q: "question 03" ,
+    q: "Hur gammal är du?" ,
     a: [{
-        t: "answer 03-01",
-        c: false
-    },{
-        t: "answer 03-02",
-        c: false
-    },{
-        t: "answer 03-03",
+        t: "Jag är 22 år gammal",
         c: true
+    },{
+        t: "Jag heter Joe",
+        c: false
+    }]
+},{
+    q: "vad ifrån kommer du?" ,
+    a: [{
+        t: "Jag fran Italien",
+        c: false
+    },{
+        t: "Jag kommer fran Italien",
+        c: true
+    },{
+        t: "Jag heter Joe",
+        c: false
     }]
 }];
 

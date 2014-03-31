@@ -27,21 +27,29 @@
                 <p>loading...</p>
             </div>
             <div data-bind="if: loading() === false">
-                <p data-bind="text:question" class="card-question">Question</p>
+                <p class="card-question">
+                    <span data-bind="text:question"></span>
+                    <a data-bind="play: question" data-icon="audio" data-iconpos="notext">play</a>
+                </p>
+                
                 <ul data-role="listview" data-bind="
                     foreach: {
                         data: answers,
                         afterRender: onAnswersRender
                     }
                 ">
-                    <li class="card-answer" data-bind="
-                        event: {
-                            touchend: $root.onAnswer.bind($root)
-                        }
-                    ">
-                        <p data-bind="text:t">answer</p>
+                    <li class="card-answer">
+                        <a href="" data-bind="
+                            event: {
+                                touchend: $root.onAnswer.bind($root)
+                            }
+                        ">
+                            <p data-bind="text:t">answer</p>
+                        </a>
+                        <a data-icon="audio"  data-bind="play: t">play</a>
                     </li>
                 </ul>
+                
             </div>
         </div>
     </div>
